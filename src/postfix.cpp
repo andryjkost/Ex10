@@ -2,7 +2,6 @@
 #include "MyStack.h"
 #include "postfix.h"
 #include <map>
-#include<tuple>
 std::string infix2postfix(std::string infix_string) {
     std::map<char, int> prior_symbles = {
             {'(', 0},
@@ -54,5 +53,6 @@ std::string infix2postfix(std::string infix_string) {
     while (!stack.isEmpty()) {
         postfix_string = postfix_string + stack.pop() +  ' ';
     }
+    postfix_string = postfix_string.substr(0, postfix_string.size()-1);
     return postfix_string;
 }
