@@ -34,12 +34,12 @@ std::string infix2postfix(std::string infix_string) {
         }
         if (prior_symbles[sign] == 5) {
             postfix_string = postfix_string + sign +  ' ';
-        }else {
+        } else {
             if (prior_symbles[sign] == 0 ||
                 prior_symbles[stack.get()] < prior_symbles[sign] ||
                 stack.isEmpty()) {
                 stack.push(sign);
-            }else {
+            } else {
                 while (prior_symbles[sign] <= prior_symbles[stack.get()] &&
                     !stack.isEmpty()) {
                     postfix_string = postfix_string + stack.pop() +  ' ';

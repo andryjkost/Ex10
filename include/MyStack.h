@@ -5,12 +5,12 @@
 
 template <class T>
 class MyStack{
-private:
+ private:
     int size;
     int current_size;
     T* stack;
 
-public:
+ public:
     MyStack() {
         this->size = 0;
         this->current_size = 0;
