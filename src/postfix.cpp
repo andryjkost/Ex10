@@ -2,6 +2,7 @@
 #include "MyStack.h"
 #include "postfix.h"
 #include <map>
+
 std::string infix2postfix(std::string infix_string) {
     std::map<char, int> prior_symbles = {
             {'(', 0},
